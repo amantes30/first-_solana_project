@@ -20,6 +20,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
           </Link>
         </div>
         <div>
+          
           <WalletMultiButton />
         </div>
       </div>

@@ -1,4 +1,5 @@
-import { Link, Navigate, useRoutes } from 'react-router-dom';
+import { Navigate, useRoutes } from 'react-router-dom';
+import { CustomNavLink } from '../components/NavLink';
 
 export function AppRoutes() {
   return useRoutes([
@@ -6,20 +7,24 @@ export function AppRoutes() {
     {
       path: '/home',
       element: (
+        
         <div>
-          <p>Home page content</p>
-          <Link to="/page-1">Page 1</Link>
+          <CustomNavLink linktext="About Page" link="about"/>          
+          <h2>Home page content</h2>          
+          
         </div>
       ),
     },
     {
-      path: '/page-1',
+      path: '/about',
       element: (
         <div>
-          <p>Page 1 content</p>
-          <Link to="/home">Home</Link>
+          <CustomNavLink linktext='Home' link='home'/>          
+          <h2>About us</h2>          
         </div>
       ),
     },
+    
   ]);
 }
+
